@@ -106,8 +106,11 @@ function getFilesIDs(auth) {
     , {destiny: 'drawable-xxxhdpi', from: '0Bym81xKPYEuDfmdtd1BmdmowckloMWtad1V1QnhMQjBmWFkwbGRVdG80aEc2WnVLaTNONUU'}];
 
   var promises = [];
+
+  var fileName = process.argv[2];
+
   for (var index = 0; index < densityFolders.length; index++) {
-    var promise = searchFile(auth, densityFolders[index], "chat_send_dis.png");
+    var promise = searchFile(auth, densityFolders[index], fileName);
     promises.push(promise);
   }
 
