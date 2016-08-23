@@ -4,6 +4,8 @@
   "description": "Drive tool",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
     "google-auth-library": "^0.9.8",
     "googleapis": "^9.0.0",
     "q": "^1.4.1"
