@@ -8,8 +8,8 @@ exports.download = function (request, response) {
 
   console.log("Downloading");
 
-  var resFolder = request.folder;
-  var fileName = request.fileName;
+  var resFolder = request.body.folder;
+  var fileName = request.body.fileName;
 
   // If modifying these scopes, delete your previously saved credentials
   // at ~/.credentials/drive-nodejs-quickstart.json

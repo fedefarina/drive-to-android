@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 
 app.set('port', (process.env.PORT || 3000));
 
 app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}));
 
 app.set('views', __dirname + '/views/pages');
 
