@@ -10,6 +10,8 @@ app.set('views', __dirname + '/views/pages');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
+require('./routes')(app);
+
 app.get('/', function (request, response) {
   response.render('main.html');
 });
